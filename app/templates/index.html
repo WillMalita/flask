@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hello, {{ user.username }}!</h1>
+    Your class list:
+    {% for class in classes %}
+    <div>
+        <p>{{ class.classInfo.code }} {{ class.classInfo.title }}
+            <br/>{{ class.instructor }}
+        </p></div>
+    {% endfor %}
+{% endblock %}
